@@ -21,28 +21,34 @@
 		</nav>
 	</header>
 	<main class="container">
-		<article class="news"> 
-			<h2 class="news-title">Только ночь, только хардкор</h2>
-			<p>Работать днем, как все? Мы против этого. <br> 
-			Ближе к полуночи работа только начинается.</p>
-			<a href="news.html" class="button-red">УЗНАТЬ БОЛЬШЕ</a>
-			<div id="slider">
+		<article class="news">
+			<h2 class="visually-hidden">Новостной блок</h2>
+			<div class="news-slide" id="news-slide-1">
+				<h2 class="news-title">Только ночь, только хардкор</h2>
+				<p>Работать днем, как все? Мы против этого. <br> 
+				Ближе к полуночи работа только начинается.</p>
+				<a href="news.html" class="button-red">УЗНАТЬ БОЛЬШЕ</a>
 				<img src="img/news-image1.png" width="760" height="431" alt="Разработка адаптивных ссайтов Nerds">
+			</div>
+			<div class="news-slide" id="news-slide-2">
+				<h2 class="news-title">Только ночь, только хардкор</h2>
+				<p>Работать днем, как все? Мы против этого. <br> 
+				Ближе к полуночи работа только начинается.</p>
+				<a href="news.html" class="button-red">УЗНАТЬ БОЛЬШЕ</a>
 				<img src="img/news-image2.png" width="760" height="431" alt="Разработка адаптивных ссайтов Nerds">
+			</div> 
+			<div class="news-slide" id="news-slide-3">
+				<h2 class="news-title">Только ночь, только хардкор</h2>
+				<p>Работать днем, как все? Мы против этого. <br> 
+				Ближе к полуночи работа только начинается.</p>
+				<a href="news.html" class="button-red">УЗНАТЬ БОЛЬШЕ</a>
 				<img src="img/news-image3.png" width="760" height="431" alt="Разработка адаптивных ссайтов Nerds">
-				<ul>
-					<li>
-						<label for="slider-fliper-1" class="visually-hidden">Первый слайд</label>
-						<input class="visually-hidden" type="radio" name="slider-fliper" id="slider-fliper-1" checked="checked"></input>
-					</li>
-					<li>
-						<label for="slider-fliper-2" class="visually-hidden">Второй слайд</label>
-						<input class="visually-hidden" type="radio" name="slider-fliper" id="slider-fliper-2"></input>
-					</li>
-					<li>
-						<label for="slider-fliper-3" class="visually-hidden">Третий слайд</label>
-						<input class="visually-hidden" type="radio" name="slider-fliper" id="slider-fliper-3"></input>
-					</li>
+			</div>  
+			<div class="flipper">
+				<ul class="slider-flipper">
+					<li class="slide-radio"><button class="button-slide" id="button-slide-1">Первый слайд</button></li>
+					<li class="slide-radio"><button class="button-slide" id="button-slide-2">Второй слайд</button></li>
+					<li class="slide-radio"><button class="button-slide" id="button-slide-3">Третий слайд</button></li>	
 				</ul>
 			
 			</div>

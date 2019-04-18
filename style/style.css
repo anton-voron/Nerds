@@ -1,1 +1,13 @@
-﻿
+﻿body{
+
+}
+
+#news-slide-1{
+	display: initial; /* включить блок убрать display: none; */
+}
+#news-slide-2{
+	display: none;
+}
+#news-slide-3{
+	display: none;
+}
