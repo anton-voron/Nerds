@@ -3,6 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Nerds</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style/normalize.css">
 	<link rel="stylesheet" type="text/css" href="style/style.css">
 </head>
 <body>
@@ -16,67 +18,67 @@
 				<li><a href="contacts.html">Контакты</a></li>
 			</ul>
 			<ul class="user-navigation">
-				<li> <a href="user-basket.html" class="user-basket"><img src="img/user-busket" width="15" height="15" alt="basket nerds">Корзина</a></li>
+				<li> <a href="user-basket.html" class="user-basket"><img src="img/user-busket.svg" width="15" height="15" alt="basket nerds">Корзина</a></li>
 			</ul>
 		</nav>
-	</header>
-	<main class="container">
 		<article class="news">
 			<h2 class="visually-hidden">Новостной блок</h2>
 			<div class="news-slide" id="news-slide-1">
-				<h2 class="news-title">Только ночь, только хардкор</h2>
-				<p>Работать днем, как все? Мы против этого. <br> 
-				Ближе к полуночи работа только начинается.</p>
-				<a href="news.html" class="button-red">УЗНАТЬ БОЛЬШЕ</a>
+				<h2 class="news-title">Долго, дорого,<br> скрупулезно.</h2>
+				<p>Математически выверенный дизайн<br>
+				для вашего сайта или мобильного приложения.</p>
+				<a href="news.html" class="button">УЗНАТЬ БОЛЬШЕ</a>
 				<img src="img/news-image1.png" width="760" height="431" alt="Разработка адаптивных ссайтов Nerds">
 			</div>
 			<div class="news-slide" id="news-slide-2">
-				<h2 class="news-title">Только ночь, только хардкор</h2>
-				<p>Работать днем, как все? Мы против этого. <br> 
-				Ближе к полуночи работа только начинается.</p>
-				<a href="news.html" class="button-red">УЗНАТЬ БОЛЬШЕ</a>
+				<h2 class="news-title">Любим математику<br> 
+				как никто другой</h2>
+				<p>Никакого креатива, только математические формулы <br>
+				для расчета идеальных пропорций.</p>
+				<a href="news.html" class="button">УЗНАТЬ БОЛЬШЕ</a>
 				<img src="img/news-image2.png" width="760" height="431" alt="Разработка адаптивных ссайтов Nerds">
 			</div> 
 			<div class="news-slide" id="news-slide-3">
 				<h2 class="news-title">Только ночь, только хардкор</h2>
 				<p>Работать днем, как все? Мы против этого. <br> 
 				Ближе к полуночи работа только начинается.</p>
-				<a href="news.html" class="button-red">УЗНАТЬ БОЛЬШЕ</a>
+				<a href="news.html" class="button">УЗНАТЬ БОЛЬШЕ</a>
 				<img src="img/news-image3.png" width="760" height="431" alt="Разработка адаптивных ссайтов Nerds">
 			</div>  
 			<div class="flipper">
 				<ul class="slider-flipper">
-					<li class="slide-radio"><button class="button-slide" id="button-slide-1">Первый слайд</button></li>
-					<li class="slide-radio"><button class="button-slide" id="button-slide-2">Второй слайд</button></li>
-					<li class="slide-radio"><button class="button-slide" id="button-slide-3">Третий слайд</button></li>	
+					<li class="slide-radio"><button class="button-slide" id="button-slide-1" aria-label="Первый слайд"></button></li>
+					<li class="slide-radio"><button class="button-slide" id="button-slide-2" aria-label="Второй слайд"></button></li>
+					<li class="slide-radio"><button class="button-slide" id="button-slide-3" aria-label="Третий слайд"></button></li>	
 				</ul>
-			
 			</div>
 		</article>
+	</header>
+	<main class="container">
 		<section class="features">
 			<h2 class="visually-hidden">Фичи сайта</h2>
 			<ul class="features-list">
 				<li class="features-service">
 					<h3>Веб-Сайты</h3>
 					<p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
-					<a href="order.html" class="button-red">Заказать</a>
+					<a href="order.html" class="button button-red">Заказать</a>
 					<img src="img/features-service-image1.png" alt="Веб сайты Nerds">
 				</li>
 				<li class="features-service">
-					<h3>Веб-Сайты</h3>
-					<p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
-					<a href="order.html" class="button-green">Заказать</a>
+					<h3>Приложения</h3>
+					<p>Покорите топ-10 приложений в AppStore и Google Play</p>
+					<a href="order.html" class="button button-green">Заказать</a>
 					<img src="img/features-service-image2.png" alt="Приложения Nerds">
 				</li>
 				<li class="features-service">
-					<h3>Веб-Сайты</h3>
-					<p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
-					<a href="order.html" class="button-yellow">Заказать</a>
+					<h3>Презентации</h3>
+					<p>МВы даже не подозреваете, насколько вы изумительны!</p>
+					<a href="order.html" class="button button-yellow">Заказать</a>
 					<img src="img/features-service-image3.png" alt="Презентации Nerds">
 				</li>
 			</ul>
 		</section>
-		<div class="info-block">
+		<section class="info-block">
 			<h1 class="info-block-title">Мы — маленькая, но гордая
 				дизайн-студия из Краснодара.</h1>
 				<p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет
@@ -87,15 +89,18 @@
 				<li>Мобильных приложений для iOS и Android</li>
 				<li>Слайдшоу и видео для корпоративных презентаций</li>
 			</ul>
-		</div>
+		</section>
 		<section class="results">
 			<img src="img/results-image.png" width="360" height="208" alt="nerds">
 			<h3>с 2004 года Любим точность во всем:</h3>
-			<ul>
-				<li><b>146%</b><span>Уровень самоотдачи</span></li>
-				<li><b>100%</b><span>Соблюдение сроков</span></li>
-				<li><b>50%</b><span>Минимальная предоплата</span></li>
-			</ul>
+			<table>
+				<tr>
+					<th>146%</th><th>100%</th><th>50%</th>
+				</tr>
+				<td><span>Уровень самоотдачи</span></td>
+				<td><span>Соблюдение сроков</span></td>
+				<td><span>Минимальная предоплата</span></td>
+			</table>
 		</section>
 		<section class="customers">
 			<h2 class="visually-hidden">Клиенты платформы</h2>
@@ -110,7 +115,7 @@
 	<footer class="main-footer">
 		<h2 class="visually-hidden">Футер сайта</h2>
 		<section class="contacts">
-			<img src="img/map.jpg" alt="Где находится Nerds">
+			<img src="img/map.jpg" alt="Где находится Nerds" width="1440" height="416">
 			<img src="img/map-location.png" alt="Адрес Nerds">
 			<div class="contacts-details">
 				<h2>NЁRDS DESIGN STUDIO</h2>
@@ -119,7 +124,7 @@
 					<br>
 					тел. +7 (812) 275-75-75
 				</p>
-				<a href="contacts.html" class="button-red">Напишите нам</a>
+				<a href="contacts.html" class="button button-red">Напишите нам</a>
 			</div> 
 		</section>
 		<div class="social-networks">

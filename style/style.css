@@ -1,5 +1,69 @@
 ﻿body{
+	padding: 0;
+	margin: 0;
 
+	font-family: "Roboto", Arial, sans-serif;
+	font-size: 16px;
+	line-height: 24px;
+	color: #283136;
+}
+a{
+	text-decoration: none;
+}
+.main-header{
+	line-height: 30px;
+	font-weight: 600;
+	
+	background-color: #eeeeee
+}
+.button{
+	font: inherit;
+	font-size: 16px;
+	line-height: 18px;
+	vertical-align: middle;
+	text-align: center;
+	color: #ffffff;
+	text-transform: uppercase;
+
+	background-color: #fb565a;
+	border: none;
+}
+.button-green{
+	background-color: #00ca74;
+}
+.button-yellow{
+	background-color: #efc84a;
+}
+.site-navigation,
+.user-navigation{
+	list-style: none;
+}
+.site-navigation li,
+.user-navigation li{
+	display: inline-block;
+}
+.site-navigation a,
+.user-navigation a{
+	color: #000000;
+}
+.site-navigation a:hover,
+.user-navigation a:hover{
+	color: #fb565a;
+}
+.site-navigation a:focus,
+.user-navigation a:fosuc{
+	color: #a6a6a6;
+}
+.current-page{
+	border-bottom: 2px solid #fb565a; /* Задали подчёркивание для текущей страницы*/
+}
+.main-header-logo:active{
+	color: #a6a6a6;
+}
+.page-title{
+	font-size: 55px;
+	line-height: 64px;
+	text-align: center;
 }
 
 #news-slide-1{
@@ -10,4 +74,114 @@
 }
 #news-slide-3{
 	display: none;
+}
+.slider-flipper{
+	list-style: none;
+}
+.slide-radio {
+    display: inline-block; /* Строчно-блочный элемент */
+}
+.button-slide{ 
+	border: 0px solid #ffffff; /* Параметры контура */
+    margin-right: 5px; /* Отступ справа */
+    background: #ffffff; /* Белый фон */
+    width: 18px; height: 18px; /* Ширина и высота */
+    border-radius: 18px; /* Делаем кружок */
+   }
+.button-slid: active{
+    background: #b00; /* Красный фон */
+    box-shadow: 0 0 4px 2px #fff; /* Параметры свечения */
+   }
+.features-list{
+	list-style: none;
+}
+.features-service{
+	display: inline-block;
+}
+.features-service h3{
+	color: #000000;
+	text-transform: uppercase;
+}
+.info-block ul{
+	list-style: none;
+}
+.info-block-title{
+	font-size: 45px;
+	line-height: 45px;
+	color: #000000;
+}
+.info-block-subtitle{
+	font-weight: 700;
+	text-transform: uppercase;
+}
+.results h3{
+	text-transform: uppercase;
+	font-weight: 700;
+}
+th{
+	font-size: 45px;
+	color: #000000;
+}
+td{
+	text-align: left;
+}
+.customers{
+	border-top: 2px solid rgba(204, 204, 204, 0.2); /*Задаём верхнюю границу с прозрачностью 20%  - 0.2*/
+	border-bottom: 2px solid rgba(204, 204, 204, 0.2);
+	padding: 0;
+	margin: 0;
+}
+.customers-list li{
+	display: inline-block;
+}
+
+.customers-list{
+	list-style: none;
+}
+.customers-list li:nth-child(2), /* nth-child(2) -выбор 2 элемента из списка ul или ol*/
+.customers-list li:nth-child(3){
+	border-right: 2px solid rgba(204, 204, 204, 0.2);
+	border-left: 2px solid rgba(204, 204, 204, 0.2);
+}
+.customers-list img{
+	opacity: 0.2;
+	filter: alpha(opacity=20); /* For IE */
+}
+.contacts-details{
+	background-color: #ffffff;
+}
+.contacts-details h2{
+	font-size: 18px;
+	line-height: 30px;
+	font-weight: 700;
+	color: #000000;
+	text-transform: uppercase;
+	text-align: center;
+}
+.contacts-details p{
+	text-align: center;
+}
+.contacts-details a{
+	text-align: center;
+}
+.social-networks b{
+	font-size: 36px;
+	color: #000000;
+	font-weight: 700;
+}
+.social-network-list{
+	list-style: none;
+}
+.social-network-list li{
+	display: inline-block;
+}
+.social-button img{
+	border: 2px solid #e1e1e1;
+	margin-right: 14px;
+	background-color: #e1e1e1;
+	border-width: 37px;
+	
+
+	width: 21px;
+	height: 21px;
 }
