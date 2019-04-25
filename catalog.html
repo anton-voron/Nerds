@@ -3,6 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Nerds-Catalog</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style/normalize.css">
 	<link rel="stylesheet" type="text/css" href="style/style.css">
 </head>
 <body>
@@ -22,168 +24,212 @@
 		<h1 class="page-title">Магазин готовых шаблонов</h1>
 	</header>
 	<main class="container">
-		<section class="filters">
-			<h2 class="visually-hidden">Фильтр каталога</h2>
-			<form class="filter" action="https://echo.htmlacademy.ru/" method="post">
-				<fieldset class="visually-hidden">
-					<legend>Стоимость:</legend>
-					<label>
-						<input type="range" name="radio">
-					</label>
-					<label for="filter-price-start">От</label>
-					<input type="number" name="price-start" id="filter-price-start">
-					<label for="filter-price-final">До</label>
-					<input type="number" name="price-final" id="filter-price-final">
-				</fieldset>
-				<fieldset class="visually-hidden">
-					<legend>Сетка:</legend>
-					<ul class="filter-grid">
-						<li>
-							<input type="radio" name="site-grid" value="adaptive" id="filter-adaptive" checked>
-							<label for="filter-adaptive">Адаптивная</label>
+		<div class="catalog-calumns">
+			<section class="filter-section">
+				<h2 class="visually-hidden">Фильтр каталога</h2>
+				<form class="filter" action="https://echo.htmlacademy.ru/" method="post">
+					<fieldset class="price-range">
+						<legend>Стоимость:</legend>
+						<label>
+							<input type="range" name="radio" class="price-range-radio">
+						</label>
+						<div class="fildset-wrapper">
+							<label for="filter-price-start">От</label>
+							<input type="text" name="price-start" id="filter-price-start" class="price-diff">
+							<label for="filter-price-final">До</label>
+							<input type="text" name="price-final" id="filter-price-final " class="price-diff">
+						</div>	
+					</fieldset>
+					<fieldset class="grid">
+						<legend>Сетка:</legend>
+						<ul class="filter-grid">
+							<li>
+								<input type="radio" name="site-grid" value="adaptive" id="filter-adaptive" checked>
+								<label for="filter-adaptive">Адаптивная</label>
+							</li>
+							<li>
+								<input type="radio" name="site-grid" value="fixed" id="filter-fixed">
+								<label for="filter-fixed">Фиксированная</label>
+							</li>
+							<li>
+								<input type="radio" name="site-grid" value="rubber" id="filter-rubber">
+								<label for="filter-rubber">Резированная</label>
+							</li>
+						</ul>
+					</fieldset>
+					<fieldset class="apps">
+						<legend>Особенности:</legend>
+						<ul class="filter-apps">
+							<li>
+								<input type="checkbox" name="slider" id="filter-slider" class="visually-hidden" checked>
+								<label for="filter-slider">Слайдер</label>
+							</li>
+							<li>
+								<input type="checkbox" name="sidebar" id="filter-sidebar" class="visually-hidden">
+								<label for="filter-sidebar">Блок преимуществ</label>
+							</li>
+							<li>
+								<input type="checkbox" name="news" id="filter-news" class="visually-hidden" checked>
+								<label for="filter-news">Новости</label>
+							</li>
+							<li>
+								<input type="checkbox" name="gallery" id="filter-gallery" class="visually-hidden">
+								<label for="filter-gallery">Галерея</label>
+							</li>
+							<li>
+								<input type="checkbox" name="basket" id="filter-basket" class="visually-hidden">
+								<label for="filter-basket">Корзина</label>
+							</li>
+						</ul>
+					</fieldset>
+					<button class="button button-grey" type="submit">Показать</button>
+				</form>
+			</section>
+			<div class="criteriasCatlog">
+				<section class="filter-criterias">
+					<h2 class="filter-criterias-title">Сортировать:</h2>
+					<ul class="filter-criterias-item">
+						<li><a href="#" class="button-criterias-current">По цене</a>
 						</li>
-						<li>
-							<input type="radio" name="site-grid" value="fixed" id="filter-fixed">
-							<label for="filter-fixed">Фиксированная</label>
+						<li><a href="#" class="button-criterias">По типу</a>
 						</li>
-						<li>
-							<input type="radio" name="site-grid" value="rubber" id="filter-rubber">
-							<label for="filter-rubber">Резированная</label>
+						<li><a href="#" class="button-criterias">По названию</a>
+						</li>
+						<li><a href="#" class="button-criterias"><img src="img/icon-up-dir.png" alt="сортировка сверху"></a>
+						</li>
+						<li><a href="" class="button-criterias"><img src="img/icon-down-dir.png" alt="сортировка снизу"></a>
 						</li>
 					</ul>
-				</fieldset>
-				<fieldset class="visually-hidden">
-					<legend>Особенности:</legend>
-					<ul class="filter-features">
-						<li>
-							<input type="checkbox" name="slider" id="filter-slider" class="visually-hidden" checked>
-							<label for="filter-slider">Слайдер</label>
+					<!-- <form class="filter-criterias-form" action="https://echo.htmlacademy.ru/" method="post">
+						<h2 class="filter-criterias-title">Сортировать:</h2>
+						<button type="submit" name="criterias-price" id="filter-criterias-price">По цене</button>
+						<button type="submit" name="criterias-type" id="filter-criterias-type">По типу</button>
+						<button type="submit" name="criterias-adc" id="filter-criterias-adc">По названию</button>
+						<input type="image" name="filter-up" src="img/icon-up-dir.png" alt="сортировка сверху">
+						<input type="image" name="filter-down" src="img/icon-down-dir.png" alt="сортировка снизу">
+					</form> -->
+				</section>
+				<section class="catalog">
+					<h2 class="visually-hidden">Каталог шаблонов</h2>
+					<ul class="catalog-list">
+						<li class="catalog-site">
+							<div class="catalog-site-wrapper">
+								<img src="img/browser.png" alt="Надстройка сайта">
+								<a href="#"><img src="img/sedona.jpg.png" width="360" height="576" alt="Шаблон SEDONA разработаный командой Nerds"></a>
+							</div>
+							<div class="modal-info">
+								<h3>
+									<b class="site-title">Sedona</b><br>
+									<span class="about-site">Информационный <br> сайт для туристов</span>
+								</h3>
+								<button class="button button-red" type="submit">9 900 руб.</button>
+							</div>
 						</li>
-						<li>
-							<input type="checkbox" name="sidebar" id="filter-sidebar" class="visually-hidden">
-							<label for="filter-sidebar">Блок преимуществ</label>
+						<li class="catalog-site">
+							<div class="catalog-site-wrapper">
+								<p class="catalog-site-image">
+									<ul class="circle">
+										<li><div class="circle-wrapper"></div></li>
+										<li><div class="circle-wrapper"></div></li>
+										<li><div class="circle-wrapper"></div></li>
+									</ul>
+									<a href="#"><img src="img/pink.jpg.png" width="360" height="576" alt="Шаблон Pink App разработаный командой Nerds"></a>
+								</p>
+							</div>
+							<div class="modal-info">
+								<h3>
+									<b class="site-title">Pink App</b><br>
+									<span class="about-site">Продуктовый лендинг <br> приложения для iOS и Android</span>
+								</h3>
+								<button class="button button-red" type="submit">9 900 руб.</button>
+							</div>
 						</li>
-						<li>
-							<input type="checkbox" name="news" id="filter-news" class="visually-hidden" checked>
-							<label for="filter-news">Новости</label>
+						<li class="catalog-site">
+							<div class="catalog-site-wrapper">
+								<p class="catalog-site-image">
+									<ul class="circle">
+										<li><div class="circle-wrapper"></div></li>
+										<li><div class="circle-wrapper"></div></li>
+										<li><div class="circle-wrapper"></div></li>
+									</ul>
+									<a href="#"><img src="img/barbershop.jpg.png" width="360" height="576" alt="Шаблон Barbershop разработаный командой Nerds"></a>
+								</p>
+							</div>
+							<div class="modal-info">
+								<h3>
+									<b class="site-title">Barbershop</b><br>
+									<span class="about-site">Сайт салоны красоты. <br> Для мужчин, да.</span>
+								</h3>
+								<button class="button button-red" type="submit">9 900 руб.</button>
+							</div>
 						</li>
-						<li>
-							<input type="checkbox" name="gallery" id="filter-gallery" class="visually-hidden">
-							<label for="filter-gallery">Галерея</label>
+						<li class="catalog-site">
+							<div class="catalog-site-wrapper">
+								<p class="catalog-site-image">
+									<ul class="circle">
+										<li><div class="circle-wrapper"></div></li>
+										<li><div class="circle-wrapper"></div></li>
+										<li><div class="circle-wrapper"></div></li>
+									</ul>
+									<a href="#"><img src="img/mishka.jpg.png" width="360" height="576" alt="Шаблон Mishka разработаный командой Nerds"></a>
+								</p>
+							</div>
+							<div class="modal-info">
+								<h3>
+									<b class="site-title">MISHKA</b><br>
+									<span class="about-site">Интернет-магазин <br> вязаных игрушек</span>
+								</h3>
+								<button class="button button-red" type="submit">9 900 руб.</button>
+							</div>
 						</li>
-						<li>
-							<input type="checkbox" name="basket" id="filter-basket" class="visually-hidden">
-							<label for="filter-basket">Корзина</label>
+						<li class="catalog-site">
+							<div class="catalog-site-wrapper">
+								<p class="catalog-site-image">
+									<ul class="circle">
+										<li><div class="circle-wrapper"></div></li>
+										<li><div class="circle-wrapper"></div></li>
+										<li><div class="circle-wrapper"></div></li>
+									</ul>
+									<a href="#"><img src="img/aplus.jpg.png" width="360" height="576" alt="Шаблон A Plus разработаный командой Nerds"></a>
+								</p>
+							</div>
+							<div class="modal-info">
+								<h3>
+									<b class="site-title">A Plus</b><br>
+									<span class="about-site">Лендинг курсов повышения <br> квалификации</span>
+								</h3>
+								<button class="button button-red" type="submit">9 900 руб.</button>
+							</div>
+						</li>
+						<li class="catalog-site">
+							<div class="catalog-site-wrapper">
+								<p class="catalog-site-image">
+									<ul class="circle">
+										<li><div class="circle-wrapper"></div></li>
+										<li><div class="circle-wrapper"></div></li>
+										<li><div class="circle-wrapper"></div></li>
+									</ul>
+									<a href="#"><img src="img/kvast.jpg.png" width="360" height="576" alt="Шаблон КВАСТ разработаный командой Nerds"></a>
+								</p>
+							</div>
+							<div class="modal-info">
+								<h3>
+									<b class="site-title">КВАСТ</b><br>
+									<span class="about-site">Промо-сайт производителя <br> крафтового кваса</span>
+								</h3>
+								<button class="button button-red" type="submit">9 900 руб.</button>
+							</div>
 						</li>
 					</ul>
-				</fieldset>
-				<button class="button button-grey" type="submit">Показать</button>
-			</form>
-		</section>
-		<section class="filter-criterias">
-			<form class="filter-criterias-form" action="https://echo.htmlacademy.ru/" method="post">
-				<h2 class="filter-criterias-title">Сортировать:</h2>
-				<button type="submit" name="criterias-price" id="filter-criterias-price">По цене</button>
-				<button type="submit" name="criterias-type" id="filter-criterias-type">По типу</button>
-				<button type="submit" name="criterias-adc" id="filter-criterias-adc">По названию</button>
-				<input type="image" name="filter-up" src="img/icon-up-dir.png" alt="сортировка сверху">
-				<input type="image" name="filter-down" src="img/icon-down-dir.png" alt="сортировка снизу">
-			</form>	
-		</section>
-		<section class="catalog">
-			<h2 class="visually-hidden">Каталог шаблонов</h2>
-			<ul class="catalog-list">
-				<li class="catalog-site">
-					<div class="catalog-site-wrapper">
-						<p class="catalog-site-image">
-							<a href="#"><img src="img/sedona.jpg.png" width="360" height="576" alt="Шаблон SEDONA разработаный командой Nerds"></a>
-						</p>
-					</div>
-					<div class="modal-info">
-						<h3>
-							<b class="site-title">Sedona</b>
-							<span class="about-site">Информационный сайт для туристов</span>
-						</h3>
-						<button class="button button-red" type="submit">9 900 руб.</button>
-					</div>
-				</li>
-				<li class="catalog-site">
-					<div class="catalog-site-wrapper">
-						<p class="catalog-site-image">
-							<a href="#"><img src="img/pink.jpg.png" width="360" height="576" alt="Шаблон Pink App разработаный командой Nerds"></a>
-						</p>
-					</div>
-					<div class="modal-info">
-						<h3>
-							<b class="site-title">Pink App</b>
-							<span class="about-site">Продуктовый лендинг <br> приложения для iOS и Android</span>
-						</h3>
-						<button class="button button-red" type="submit">9 900 руб.</button>
-					</div>
-				</li>
-				<li class="catalog-site">
-					<div class="catalog-site-wrapper">
-						<p class="catalog-site-image">
-							<a href="#"><img src="img/barbershop.jpg.png" width="360" height="576" alt="Шаблон Barbershop разработаный командой Nerds"></a>
-						</p>
-					</div>
-					<div class="modal-info">
-						<h3>
-							<b class="site-title">Barbershop</b>
-							<span class="about-site">Сайт салоны красоты. <br> Для мужчин, да.</span>
-						</h3>
-						<button class="button button-red" type="submit">9 900 руб.</button>
-					</div>
-				</li>
-				<li class="catalog-site">
-					<div class="catalog-site-wrapper">
-						<p class="catalog-site-image">
-							<a href="#"><img src="img/mishka.jpg.png" width="360" height="576" alt="Шаблон Mishka разработаный командой Nerds"></a>
-						</p>
-					</div>
-					<div class="modal-info">
-						<h3>
-							<b class="site-title">MISHKA</b>
-							<span class="about-site">Интернет-магазин <br> вязаных игрушек</span>
-						</h3>
-						<button class="button button-red" type="submit">9 900 руб.</button>
-					</div>
-				</li>
-				<li class="catalog-site">
-					<div class="catalog-site-wrapper">
-						<p class="catalog-site-image">
-							<a href="#"><img src="img/aplus.jpg.png" width="360" height="576" alt="Шаблон A Plus разработаный командой Nerds"></a>
-						</p>
-					</div>
-					<div class="modal-info">
-						<h3>
-							<b class="site-title">A Plus</b>
-							<span class="about-site">Лендинг курсов повышения <br> квалификации</span>
-						</h3>
-						<button class="button button-red" type="submit">9 900 руб.</button>
-					</div>
-				</li>
-				<li class="catalog-site">
-					<div class="catalog-site-wrapper">
-						<p class="catalog-site-image">
-							<a href="#"><img src="img/kvast.jpg.png" width="360" height="576" alt="Шаблон КВАСТ разработаный командой Nerds"></a>
-						</p>
-					</div>
-					<div class="modal-info">
-						<h3>
-							<b class="site-title">КВАСТ</b>
-							<span class="about-site">Промо-сайт производителя <br> крафтового кваса</span>
-						</h3>
-						<button class="button button-red" type="submit">9 900 руб.</button>
-					</div>
-				</li>
-			</ul>
-			<ul>
+				</section>
+			</div>
+		</div>
+			<ul class="pagination">
 				<li class="pagination-site pagination-site-current"><a>1</a></li>
 				<li class="pagination-site"><a href="#">2</a></li>
 				<li class="pagination-site"><a href="#">3</a></li>
 				<li class="pagination-site"><a href="#">4</a></li>
-				<li class="pagination-site"><a href="#" class="button button-grey">Следующая</a></li>
+				<li class="pagination-site"><a href="#" class="button button-next">Следующая</a></li>
 			</ul>
 		</section>
 	</main>

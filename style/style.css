@@ -2,10 +2,11 @@
 	padding: 0;
 	margin: 0;
 
-	font-family: "Roboto", Arial, sans-serif;
+	font-family: 'Roboto', Arial, sans-serif;
 	font-size: 16px;
 	line-height: 24px;
 	color: #283136;
+	font-weight: 400;
 }
 a{
 	text-decoration: none;
@@ -14,7 +15,16 @@ a{
 	line-height: 30px;
 	font-weight: 600;
 	
-	background-color: #eeeeee
+	background-color: #eeeeee;
+
+	padding: 0;
+	margin: 0;
+	margin-bottom: 80px;
+}
+.container{
+	width: 1160px;
+	padding: 0;
+	margin: 0 20px;
 }
 .button{
 	font: inherit;
@@ -26,13 +36,40 @@ a{
 	text-transform: uppercase;
 
 	background-color: #fb565a;
-	border: none;
+	border: 3px;
+	border-radius: 2%
+}
+.button:hover,
+.button:focus{
+	background-color: #e74246;
 }
 .button-green{
 	background-color: #00ca74;
 }
+.button-green: hover,
+.button-green: focus{
+	background-color: #00bc6c;
+}
 .button-yellow{
 	background-color: #efc84a;
+}
+.button-yellow: hover,
+.button-yellow: focus{
+	background-color: #eab534;
+}
+.button-grey{
+	color: #000000;
+	font-weight: 700;
+
+	background-color: #eeeeee;
+}
+.button-grey: hover,
+.button-grey: focus{
+	background-color: #dfdfdf;
+}
+.main-navigation{
+	display: flex;
+	justify-content: space-between;
 }
 .site-navigation,
 .user-navigation{
@@ -40,7 +77,6 @@ a{
 }
 .site-navigation li,
 .user-navigation li{
-	display: inline-block;
 }
 .site-navigation a,
 .user-navigation a{
@@ -65,15 +101,36 @@ a{
 	line-height: 64px;
 	text-align: center;
 }
+.flex-wrapper{
+	padding: 0;
+	margin: 0;
+	display: flex;
+	justify-content: space-between;
+}
+.slide-info{
+	width: 410px;
+	padding: 0;
+	margin: 0;
+}
+.news-title{
+	font-size: 55px;
+	line-height: 55px;
+	color: #000000;
 
-#news-slide-1{
-	display: initial; /* включить блок убрать display: none; */
+	padding: 0;
+	margin: 0;
+
+	margin-bottom: 28px;
 }
-#news-slide-2{
-	display: none;
+.slide-info p{
+	font-weight: 400;
+
+	margin-bottom: 45px;
 }
-#news-slide-3{
-	display: none;
+.slide-photo{
+	width: 750px;
+	padding: 0;
+	margin: 0;
 }
 .slider-flipper{
 	list-style: none;
@@ -88,31 +145,74 @@ a{
     width: 18px; height: 18px; /* Ширина и высота */
     border-radius: 18px; /* Делаем кружок */
    }
-.button-slid: active{
+.button-slide: active{
     background: #b00; /* Красный фон */
     box-shadow: 0 0 4px 2px #fff; /* Параметры свечения */
    }
+ .features{
+ 	padding: 0;
+ 	margin: 0;
+ 	margin-bottom: 60px;
+ }
 .features-list{
 	list-style: none;
+	display: flex;
+	justify-content: space-between;
 }
 .features-service{
-	display: inline-block;
+	width: 300px;
+	padding-left: auto;
+
+	display: flex;
+	flex-direction: column;
+}
+.features-service img{
+	margin-bottom: 25px;
+
+	order: 0;
 }
 .features-service h3{
+	font-size: 24px;
+	font-weight: 700;
 	color: #000000;
 	text-transform: uppercase;
+
+	margin-bottom: 22px;
+	order: 1;
+}
+.features-service p{
+	font-weight: 500;
+
+	order: 2;
+
+	margin-bottom: 35px;
+}
+.features-service a{
+	order: 3;
+}
+.info-block{
+	width: 660px;
+	padding: 0;
+	margin: 0;
+	margin-bottom: 80px;
 }
 .info-block ul{
 	list-style: none;
 }
 .info-block-title{
-	font-size: 45px;
+	font-size: 40px;
 	line-height: 45px;
 	color: #000000;
 }
 .info-block-subtitle{
 	font-weight: 700;
 	text-transform: uppercase;
+}
+.results{
+	width: 360px;
+	padding: 0;
+	margin: 0;
+	margin-bottom: 80px;
 }
 .results h3{
 	text-transform: uppercase;
@@ -131,15 +231,15 @@ td{
 	padding: 0;
 	margin: 0;
 }
-.customers-list li{
-	display: inline-block;
-}
-
 .customers-list{
 	list-style: none;
+
+	display: flex;
+	justify-content: space-between;
 }
 .customers-list li:nth-child(2), /* nth-child(2) -выбор 2 элемента из списка ul или ol*/
 .customers-list li:nth-child(3){
+	padding: 0 50px;
 	border-right: 2px solid rgba(204, 204, 204, 0.2);
 	border-left: 2px solid rgba(204, 204, 204, 0.2);
 }
@@ -147,8 +247,22 @@ td{
 	opacity: 0.2;
 	filter: alpha(opacity=20); /* For IE */
 }
+.contacts{
+	
+}
+.map-cut img{
+	left: -500px;
+}
 .contacts-details{
+	width: 220px;
+	min-height: 210px;
+
 	background-color: #ffffff;
+
+	padding: 50px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
 }
 .contacts-details h2{
 	font-size: 18px;
@@ -157,12 +271,29 @@ td{
 	color: #000000;
 	text-transform: uppercase;
 	text-align: center;
+
+	margin: 0;
 }
 .contacts-details p{
+	margin: 0; /*Так как это АБЗАЦ <p> текст у него по умолчанию есть margin, его нужно обнулить НЕ ЗАБЫВАЕМ!*/
+
 	text-align: center;
 }
 .contacts-details a{
 	text-align: center;
+	
+	width: 220;
+}
+.social-networks{
+	display: flex;
+}
+.social-network-list{
+	width: 260px;
+	padding: 0;
+	margin: 0;
+	margin-right: 144px;
+
+	display: flex;
 }
 .social-networks b{
 	font-size: 36px;
@@ -173,15 +304,224 @@ td{
 	list-style: none;
 }
 .social-network-list li{
-	display: inline-block;
+	
 }
 .social-button img{
-	border: 2px solid #e1e1e1;
-	margin-right: 14px;
-	background-color: #e1e1e1;
-	border-width: 37px;
 	
+	background-color: #e1e1e1;
+}
+/*КАТАЛОГ*/
+.catalog-calumns{
+	display: flex;
+	justify-content: space-between;
+}
+.filter-section{
+	width: 260px;
+	padding: 0;
+	margin: 0;
+	margin-right: 140px;
+}
+.fildset-wrapper{
+	display: flex;
+	justify-content: space-between;
+}
+.price-diff{
+	width: 80px;
+}
+.filter fieldset{
+	border: none;
+}
+.filter legend{
+	font-size: 18px;
+	line-height: 22px;
+	color: #000000;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+.price-range{
+	padding: 0;
+	margin: 0;
+	margin-bottom: 59px;
+}
+.price-range legend{
+	margin-bottom: 50px;
+}
+.price-range-radio{
+	margin-bottom: 14px;
+}
+.fildset-wrapper input{
+	font: inherit;
+	line-height: 22px;
+	text-align: center;
+	border: none;
+	border-radius: 3px;
 
-	width: 21px;
-	height: 21px;
+	background-color: #eeeeee;
+}
+.fildset-wrapper label{
+	line-height: 22px;
+	text-transform: uppercase;
+}
+.grid{
+	padding: 0;
+	margin-bottom: 48px;
+}
+.grid legend{
+	margin-bottom: 22px;
+}
+.filter-grid{
+	padding: 0;
+	list-style: none;
+}
+.filter-apps{
+	padding: 0;
+	margin-bottom: 48px;
+}
+.filter-apps legend{
+	margin-bottom: 22px;
+}
+.filter-apps{
+	list-style: none;
+}
+.filter-criterias{
+	display: flex;
+	justify-content: space-between;
+}
+.filter-criterias-title{
+	font-size: 18px;
+}
+.filter-criterias-item{
+	width: 360px;
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+	padding: 0;
+}
+.button-criterias{
+	font-size: 14px;
+	line-height: 18px;
+	color: #b2b2b2;
+
+	text-transform: uppercase;
+}
+.button-criterias-current{
+	color: #000000;
+}
+.button-criterias img{
+	color: #b2b2b2;
+}
+.catalog-list{
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap; /* - делаем размещение переноса элементов на новую строку*/
+	/*justify-content: space-between; /*Это не гибкая система, если будет меньшее количество карточек, то расстояние будет разное (не как в макете)
+	Поэтому лучше задавать точные margin (пример ниже)*/
+	padding: 0;
+}
+.catalog-site{
+	width: 360px;
+	margin-bottom: 35px;
+	margin-right: 40px; /*Сейчас 3 элемента не помещаются в 1 строку, так как размер контейнера 700,
+	а с учётом марджин лефт 20 пикс у нас получается итого 720 пикс, поэтому сбрасываем каждому 3-эму элементу правый отступ*/
+
+	display: flex;
+	flex-direction: column;
+}
+.catalog-site:nth-child(2n){
+	margin-right: 0; /* сбросили правый марджин каждому 3-эму элементу*/
+}
+.catalog-site-wrapper{
+	padding: 0;
+	margin: 0;
+}
+.catalog-site-wrapper img{
+	padding: 0;
+	margin: 0;
+}
+.catalog-site-wrapper a{
+	padding: 0;
+	margin: 0;
+}
+/*.circle{
+	list-style: none;
+}
+.circle li{
+	display: inline-block;
+	padding: 3px;
+}
+
+.circle-wrapper{
+	width: 17px; 
+	height: 17px;
+	background: #000000;
+	border-radius: 50%;
+}*/
+.modal-info{
+	background-color: #eeeeee;
+
+	padding-top: 20px;
+	margin-bottom: 43px;
+	padding-right: 80px;
+	padding-left: 80px;
+	margin: 0;
+}
+.modal-info h3, button{
+	text-align: center;
+	font-weight: initial;
+	color: #666666;
+
+	padding: 0;
+	margin: 0;
+}
+.modal-info .button{
+	display: block;
+	width: 200;
+}
+.site-title{
+	font-size: 18px;
+	line-height: 30px;
+	color: #000000;
+	text-transform: uppercase;
+
+	padding: 0;
+	margin: 0;
+}
+.pagination{
+	list-style: none;
+	margin-left: 300px;
+	display: flex;
+}
+.pagination-site{
+	width: 46px;
+	margin-right: 5px;
+
+	border: 2px solid #eeeeee;
+	border-radius: 2px;
+	background-color: #eeeeee;
+
+	line-height: 50px;
+	text-align: center;
+	vertical-align: middle;
+	font-weight: 700;
+}
+.pagination-site a{
+	color: #444444;
+}
+a.button {
+	display: block;
+	width: 260px;
+	height: 54px;
+	background-color: #eeeeee;
+}
+a.button:hover {
+	background-color: #dfdfdf;
+}
+a.button:active {
+	border-top: 2px solid #bfbfbf;
+	border-radius: 2px;
+	background-color: #d5d5d5;
+	color: #bfbfbf;
+}
+.pagination-site-current{
+	background-color: #ffffff;
 }
