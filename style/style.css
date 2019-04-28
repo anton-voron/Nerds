@@ -24,12 +24,17 @@ a{
 .container{
 	width: 1160px;
 	padding: 0;
-	margin: 0 20px;
+	margin: 0 5%;
 }
 .button{
+	display: inline-block;
+	padding: 16px 60px;
+	margin-bottom: 44px;
+
 	font: inherit;
 	font-size: 16px;
 	line-height: 18px;
+
 	vertical-align: middle;
 	text-align: center;
 	color: #ffffff;
@@ -39,23 +44,60 @@ a{
 	border: 3px;
 	border-radius: 2%
 }
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+	position: absolute;
+
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
 .button:hover,
 .button:focus{
 	background-color: #e74246;
 }
+.button:active{
+	border-top: 2px solid #c13135;
+	background-color: #d7373b;
+	padding: 14px 60px;
+
+	color: #e37376;
+}
 .button-green{
 	background-color: #00ca74;
 }
-.button-green: hover,
-.button-green: focus{
+.button-green:hover,
+.button-green:focus{
 	background-color: #00bc6c;
+}
+.button-green:active{
+	border-top: 2px solid #009958;
+	background-color: #00aa62;
+	padding: 14px 60px;
+
+	color: #4dc491;
 }
 .button-yellow{
 	background-color: #efc84a;
 }
-.button-yellow: hover,
-.button-yellow: focus{
+.button-yellow:hover,
+.button-yellow:focus{
 	background-color: #eab534;
+}
+.button-yellow:active{
+	border-top: 2px solid #ce961f;
+	background-color: #e5a722;
+	padding: 14px 60px;
+
+	color: #edc265;
 }
 .button-grey{
 	color: #000000;
@@ -63,20 +105,62 @@ a{
 
 	background-color: #eeeeee;
 }
-.button-grey: hover,
-.button-grey: focus{
+.button-grey:hover,
+.button-grey:focus{
 	background-color: #dfdfdf;
+}
+.button-grey:active{
+	border-top: 2px solid #bfbfbf;
+	background-color: #d5d5d5;
+	padding: 14px 60px;
+
+	color: #a6a6a6;
 }
 .main-navigation{
 	display: flex;
 	justify-content: space-between;
 }
-.site-navigation,
-.user-navigation{
+.site-navigation{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	justify-content: space-between;
+}
+.site-navigation li {
+	margin-left: 47px;
+}
+.user-navigation {
+	display: flex; /*у нас в ul вход есть иконка входа, делаем флекс чтобы поместить её туда*/
+	max-width: 140px; /*Вместо width используем max-width чтобы ужимать блок по контенту*/
+	margin: 0;
+	padding: 0;
+	margin-left: auto;
+
 	list-style: none;
 }
-.site-navigation li,
-.user-navigation li{
+.user-navigation .busket{
+	display: flex;
+	position: relative;
+	padding-left: 45px;
+}
+.site-navigation,
+.user-navigation{
+	align-items: center; 
+}
+
+.busket::before{
+	content: ""; /*Это строчный элемент поєтому делаем position: absolute*/
+
+	position: absolute;
+	top: 5px;
+	left: 0px;
+	width: 16px;
+	height: 18px;
+
+	background-image: url("../img/user-busket.svg.png");
+	background-repeat: no-repeat;
+	background-position: 0 0;
 }
 .site-navigation a,
 .user-navigation a{
@@ -97,20 +181,58 @@ a{
 	color: #a6a6a6;
 }
 .page-title{
+	display: block;
+	height: 165px;
 	font-size: 55px;
 	line-height: 64px;
 	text-align: center;
+	margin-bottom: 55px;
+}
+.news-container{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	position: relative;
+
+	background-color: #eeeeee;
+	min-height: 445px;
 }
 .flex-wrapper{
-	padding: 0;
-	margin: 0;
+	padding: 0px;
+	margin: 0px;
 	display: flex;
 	justify-content: space-between;
+}
+.flex-wrapper .slider{
+	width: 1160px;
+	
+	background-color: #eeeeee;
+}
+.slide-1{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 3;
+	display: none;
+}
+.slide-2{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 2;
+	display: none;
+}
+.slide-3{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 1;
 }
 .slide-info{
 	width: 410px;
 	padding: 0;
 	margin: 0;
+	padding-top: 80px;
 }
 .news-title{
 	font-size: 55px;
@@ -125,18 +247,26 @@ a{
 .slide-info p{
 	font-weight: 400;
 
-	margin-bottom: 45px;
+	margin-bottom: 40px;
 }
 .slide-photo{
 	width: 750px;
 	padding: 0;
 	margin: 0;
 }
+div.flipper{
+	position: absolute;
+	padding: 0;
+	margin: 0;
+	top: 310px;
+	left: 50%;
+	z-index: 5;
+}
 .slider-flipper{
 	list-style: none;
+	display: flex;
 }
 .slide-radio {
-    display: inline-block; /* Строчно-блочный элемент */
 }
 .button-slide{ 
 	border: 0px solid #ffffff; /* Параметры контура */
@@ -145,17 +275,24 @@ a{
     width: 18px; height: 18px; /* Ширина и высота */
     border-radius: 18px; /* Делаем кружок */
    }
-.button-slide: active{
-    background: #b00; /* Красный фон */
-    box-shadow: 0 0 4px 2px #fff; /* Параметры свечения */
-   }
+.button-slide:hover,
+.button-slide:focus,
+.button-slide:active{
+	background-image: url("../img/active-button.png");
+	background-position: center;
+	background-repeat: no-repeat;
+}
  .features{
  	padding: 0;
  	margin: 0;
+ 	padding-bottom: 81px;
  	margin-bottom: 60px;
+ 	border-bottom: 2px solid #eeeeee;
  }
 .features-list{
 	list-style: none;
+	padding: 0;
+	margin: 0;
 	display: flex;
 	justify-content: space-between;
 }
@@ -198,6 +335,24 @@ a{
 }
 .info-block ul{
 	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.info-block li{
+	margin-bottom: 35px;
+	padding-left: 40px;
+	position: relative;
+	display: flex;
+}
+.info-block li::before{
+	content: "";
+
+	position: absolute;
+	top: 12px;
+	left: 0px;
+	width: 25px;
+	height: 2px;
+	background-color: #fb565a;
 }
 .info-block-title{
 	font-size: 40px;
@@ -215,54 +370,96 @@ a{
 	margin-bottom: 80px;
 }
 .results h3{
+	font: inherit;
 	text-transform: uppercase;
 	font-weight: 700;
+	margin-bottom: 50px;
 }
 th{
+	text-align: left;
 	font-size: 45px;
 	color: #000000;
+	width: 120px;
 }
 td{
 	text-align: left;
+	width: 120px;
 }
 .customers{
+	display: flex;
+	align-items: center;
 	border-top: 2px solid rgba(204, 204, 204, 0.2); /*Задаём верхнюю границу с прозрачностью 20%  - 0.2*/
 	border-bottom: 2px solid rgba(204, 204, 204, 0.2);
 	padding: 0;
 	margin: 0;
+	padding-top: 40px;
+	padding-bottom: 15px;
+	margin-bottom: 80px;
 }
 .customers-list{
 	list-style: none;
 
 	display: flex;
 	justify-content: space-between;
+
+	padding: 0;
+	margin: 0;
 }
-.customers-list li:nth-child(2), /* nth-child(2) -выбор 2 элемента из списка ul или ol*/
-.customers-list li:nth-child(3){
-	padding: 0 50px;
-	border-right: 2px solid rgba(204, 204, 204, 0.2);
-	border-left: 2px solid rgba(204, 204, 204, 0.2);
+.customers-list li{
+	padding-right: 100px;
+	display: flex;
+	position: relative;
 }
 .customers-list img{
 	opacity: 0.2;
 	filter: alpha(opacity=20); /* For IE */
+	padding: 0;
+	margin: 0;
+}
+.customers-list li:nth-child(1)::after,
+.customers-list li:nth-child(2)::after,
+.customers-list li:nth-child(3)::after{
+	content: "";
+
+	position: absolute;
+	top: 0px;
+	right: 50px;
+	width: 2px;
+	height: 51px;
+	background-color: #eeeeee;
 }
 .contacts{
-	
+	position: relative;
+	min-height: 420px;
+	margin-bottom: 67px;
 }
 .map-cut img{
-	left: -500px;
+	position: absolute;
+	top: 0px;
+	left: -100px;
+	z-index: 1;
 }
 .contacts-details{
 	width: 220px;
-	min-height: 210px;
+	height: 208px;
 
 	background-color: #ffffff;
 
 	padding: 50px;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-around;
+	justify-content: space-between;
+
+	position: absolute;
+	top: 56px;
+	left: 40px;
+	z-index: 2;
+}
+.map-location{
+	position: absolute;
+	top: 98px;
+	left: 720px;
+	z-index: 3;
 }
 .contacts-details h2{
 	font-size: 18px;
@@ -273,16 +470,22 @@ td{
 	text-align: center;
 
 	margin: 0;
+	margin-bottom: 27px;
 }
 .contacts-details p{
 	margin: 0; /*Так как это АБЗАЦ <p> текст у него по умолчанию есть margin, его нужно обнулить НЕ ЗАБЫВАЕМ!*/
 
 	text-align: center;
+}.contacts-details p:nth-child(2){
+	margin-bottom: 20px;
+
+
+	text-align: center;
 }
 .contacts-details a{
-	text-align: center;
-	
-	width: 220;
+	margin-top: 30px;
+	padding-right: 45px;
+	padding-left: 45px;
 }
 .social-networks{
 	display: flex;
@@ -302,13 +505,21 @@ td{
 }
 .social-network-list{
 	list-style: none;
+	margin: 0;
+	padding: 0;
+	margin-right: 141px;
 }
-.social-network-list li{
-	
+.social-button {
+	margin-left: 13px;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	background-color: #e1e1e1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 .social-button img{
-	
-	background-color: #e1e1e1;
 }
 /*КАТАЛОГ*/
 .catalog-calumns{
@@ -327,6 +538,8 @@ td{
 }
 .price-diff{
 	width: 80px;
+	margin-right: 13px;
+	margin-left: 36px;
 }
 .filter fieldset{
 	border: none;
@@ -386,6 +599,8 @@ td{
 .filter-criterias{
 	display: flex;
 	justify-content: space-between;
+	padding: 0;
+	margin: 0;
 }
 .filter-criterias-title{
 	font-size: 18px;
@@ -416,66 +631,94 @@ td{
 	flex-wrap: wrap; /* - делаем размещение переноса элементов на новую строку*/
 	/*justify-content: space-between; /*Это не гибкая система, если будет меньшее количество карточек, то расстояние будет разное (не как в макете)
 	Поэтому лучше задавать точные margin (пример ниже)*/
+	margin: 0;
 	padding: 0;
 }
 .catalog-site{
 	width: 360px;
+	padding: 0;
+	margin: 0;
 	margin-bottom: 35px;
 	margin-right: 40px; /*Сейчас 3 элемента не помещаются в 1 строку, так как размер контейнера 700,
 	а с учётом марджин лефт 20 пикс у нас получается итого 720 пикс, поэтому сбрасываем каждому 3-эму элементу правый отступ*/
 
-	display: flex;
-	flex-direction: column;
+	position: relative;
+	z-index: 1001;
 }
 .catalog-site:nth-child(2n){
 	margin-right: 0; /* сбросили правый марджин каждому 3-эму элементу*/
+	margin-top: 0;
 }
-.catalog-site-wrapper{
+.site-link{
+	display: flex;
+	flex-direction: column;
+}
+.site-image{
 	padding: 0;
 	margin: 0;
 }
-.catalog-site-wrapper img{
+.site-image {
 	padding: 0;
 	margin: 0;
+
+	border-top: 2px solid #e9e9e9;
+	width: 360px;
+	border-width: 40px;
+	border-radius: 4px;
+
 }
-.catalog-site-wrapper a{
-	padding: 0;
-	margin: 0;
-}
-/*.circle{
+.site-link ul{
 	list-style: none;
-}
-.circle li{
-	display: inline-block;
-	padding: 3px;
-}
 
-.circle-wrapper{
-	width: 17px; 
-	height: 17px;
-	background: #000000;
+	display: flex;
+	position: absolute;
+	padding: 0;
+	margin: 0;
+	top: 15px;
+	left: 15px;
+}
+.circle{
+	width: 16px;
+	height: 16px;
+	background-color: #ffffff;
 	border-radius: 50%;
-}*/
-.modal-info{
-	background-color: #eeeeee;
+	margin-left: 9px;
+}
+.site-link:hover .site-image{
+	border-color: #4c4c4c;
+}
 
-	padding-top: 20px;
-	margin-bottom: 43px;
+.modal-info{
+	position: absolute;
+	top: 387px;
+	opacity: 0;
+
+	width: 200px;
+	height: 158px;
+	
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	padding-top: 35px;
+	padding-bottom: 45px;
 	padding-right: 80px;
 	padding-left: 80px;
-	margin: 0;
+
+	background-color: #eeeeee;
+}
+.site-link:hover .modal-info{
+	opacity: 1;
 }
 .modal-info h3, button{
 	text-align: center;
 	font-weight: initial;
 	color: #666666;
 
-	padding: 0;
 	margin: 0;
 }
-.modal-info .button{
-	display: block;
-	width: 200;
+.modal-info h3{
+	margin-bottom: 35px;
 }
 .site-title{
 	font-size: 18px;
@@ -483,8 +726,22 @@ td{
 	color: #000000;
 	text-transform: uppercase;
 
+	display: block;
+
 	padding: 0;
 	margin: 0;
+	padding-bottom: 20px;
+}
+.about-site{
+	display: block;
+	padding: 0;
+	margin: 0;
+
+	font-size: 16px;
+	line-height: 18px;
+}
+.modal-info button{
+	width: 200px;
 }
 .pagination{
 	list-style: none;
@@ -492,31 +749,41 @@ td{
 	display: flex;
 }
 .pagination-site{
-	width: 46px;
-	margin-right: 5px;
 
-	border: 2px solid #eeeeee;
-	border-radius: 2px;
-	background-color: #eeeeee;
-
-	line-height: 50px;
-	text-align: center;
-	vertical-align: middle;
-	font-weight: 700;
 }
-.pagination-site a{
+.pagination-page a{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0;
+	margin: 0;
+	margin-right: 11px;
+
+
+	width: 50px;
+	height: 50px;
+
 	color: #444444;
-}
-a.button {
-	display: block;
-	width: 260px;
-	height: 54px;
+
 	background-color: #eeeeee;
 }
-a.button:hover {
+.pagination-page-current a{
+	background-color: #ffffff;
+
+	width: 45px;
+	height: 45px;
+
+	border: 3px solid #eeeeee;
+	border-radius: 2px;
+}
+.button-next {
+	color: #444444;
+	background-color: #eeeeee;
+}
+.button-next:hover {
 	background-color: #dfdfdf;
 }
-a.button:active {
+.button-next:active {
 	border-top: 2px solid #bfbfbf;
 	border-radius: 2px;
 	background-color: #d5d5d5;
