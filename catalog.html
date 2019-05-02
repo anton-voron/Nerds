@@ -45,16 +45,25 @@
 						<legend>Сетка:</legend>
 						<ul class="filter-grid">
 							<li>
-								<input type="radio" name="site-grid" value="adaptive" id="filter-adaptive" checked>
-								<label for="filter-adaptive">Адаптивная</label>
+								<label class="filter-radio" for="filter-adaptive">
+									<input class="visually-hidden" type="radio" name="site-grid" value="adaptive" id="filter-adaptive" checked>
+									<span class="radio-indicator"></span>
+									Адаптивные
+								</label>
 							</li>
 							<li>
-								<input type="radio" name="site-grid" value="fixed" id="filter-fixed">
-								<label for="filter-fixed">Фиксированная</label>
+								<label class="filter-radio" for="filter-fixed">
+									<input class="visually-hidden" type="radio" name="site-grid" value="fixed" id="filter-fixed">
+									<span class="radio-indicator"></span>
+									Фиксированная
+								</label>
 							</li>
 							<li>
-								<input type="radio" name="site-grid" value="rubber" id="filter-rubber">
-								<label for="filter-rubber">Резированная</label>
+								<label class="filter-radio" for="filter-rubber">
+									<input class="visually-hidden" type="radio" name="site-grid" value="rubber" id="filter-rubber">
+									<span class="radio-indicator"></span>
+									Резированная
+								</label>
 							</li>
 						</ul>
 					</fieldset>
@@ -62,24 +71,39 @@
 						<legend>Особенности:</legend>
 						<ul class="filter-apps">
 							<li>
-								<input type="checkbox" name="slider" id="filter-slider" class="visually-hidden" checked>
-								<label for="filter-slider">Слайдер</label>
+								<label class="filter-checkbox" for="filter-slider">
+									<input type="checkbox" name="slider" id="filter-slider" class="visually-hidden" checked>
+									Слайдер
+									<span class="checkbox-indicator"></span>
+								</label>
 							</li>
 							<li>
-								<input type="checkbox" name="sidebar" id="filter-sidebar" class="visually-hidden">
-								<label for="filter-sidebar">Блок преимуществ</label>
+								<label class="filter-checkbox" for="filter-sidebar">
+									<input type="checkbox" name="sidebar" id="filter-sidebar" class="visually-hidden">
+									Блок преимуществ
+									<span class="checkbox-indicator"></span>
+								</label>
 							</li>
 							<li>
-								<input type="checkbox" name="news" id="filter-news" class="visually-hidden" checked>
-								<label for="filter-news">Новости</label>
+								<label class="filter-checkbox" for="filter-news">
+									<input type="checkbox" name="news" id="filter-news" class="visually-hidden" checked>
+									<span class="checkbox-indicator"></span>
+									Новости
+								</label>
 							</li>
 							<li>
-								<input type="checkbox" name="gallery" id="filter-gallery" class="visually-hidden">
-								<label for="filter-gallery">Галерея</label>
+								<label class="filter-checkbox" for="filter-gallery">
+									<input type="checkbox" name="gallery" id="filter-gallery" class="visually-hidden">
+									Галерея
+									<span class="checkbox-indicator"></span>
+								</label>
 							</li>
 							<li>
-								<input type="checkbox" name="basket" id="filter-basket" class="visually-hidden">
-								<label for="filter-basket">Корзина</label>
+								<label class="filter-checkbox" for="filter-basket">
+									<input type="checkbox" name="basket" id="filter-basket" class="visually-hidden">
+									Корзина
+									<span class="checkbox-indicator"></span>
+								</label>
 							</li>
 						</ul>
 					</fieldset>
@@ -251,7 +275,7 @@
 					ул. Б. Конюшенная, д. 19/8
 				</p>
 				<p>тел. +7 (812) 275-75-75</p>
-				<a href="contacts.html" class="button button-red">Напишите нам</a>
+				<a href="contacts.html" class="button button-red button-contact">Напишите нам</a>
 			</div> 
 		</section>
 		<div class="social-networks container">
@@ -266,6 +290,27 @@
 			</div>
 		</div>
 	</footer>
+	<section class="modal contuct-us">
+		<h2>Напишите нам</h2>
+		<form  class="contact-details" action="https://echo.htmlacademy.ru/" method="post">
+			<div class="flex-wrapper modal-flex">
+				<p>
+					<label for="name">Ваше имя:</label>
+					<input class="details-name" type="text" name="user-name" id="name" placeholder="Имя Фамилия" value="">
+				</p>
+				<p>
+					<label for="email">Ваш e-mail:</label>
+					<input class="details-email" type="text" name="user-email" id="email" placeholder="email@example.com" value="">
+				</p>
+			</div>
+			<p>
+				<label for="letter">Текст письма:</label>
+				<input class="details-letter" type="text" name="user-letter" id="letter" placeholder="В свободной форме" value="">
+			</p>
+			<button class="button" type="submit">Отправить</button>
+		</form>
+		<button class="modal-close" type="button">Закрыть</button>
+	</section>
 	<script src="js/index.js"></script>
 </body>
 </html>

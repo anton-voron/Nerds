@@ -24,38 +24,39 @@
 		</nav>
 		<article class="news-container container">
 			<h2 class="visually-hidden">Новостной блок</h2>
-			<div class="flex-wrapper slide-1" id="news-slide-1">
-				<div class="slide-info">
-					<h2 class="news-title">Долго, дорого, скрупулезно.</h2>
-					<p>Математически выверенный дизайн<br>
-					для вашего сайта или мобильного приложения.</p>
-					<a href="#" class="button">УЗНАТЬ БОЛЬШЕ</a>
-				</div>
-				<div class="slide-photo">
-					<img src="img/news-image1.png" width="760" height="431" alt="Разработка адаптивных ссайтов Nerds">
-				</div>
-			</div>
-			<div class="flex-wrapper slider slide-2" id="news-slide-1">
-				<div class="slide-info">
-					<h2 class="news-title">Любим математику как никто другой.</h2>
-					<p>Никакого креатива, только математические формулы 
-					для расчета идеальных пропорций.</p>
-					<a href="#" class="button">УЗНАТЬ БОЛЬШЕ</a>
-				</div>
-				<div class="slide-photo">
-					<img src="img/news-image2.png" width="760" height="431" alt="Разработка адаптивных ссайтов Nerds">
-				</div>
-			</div>
-			<div class="flex-wrapper slide-3" id="news-slide-1">
-				<div class="slide-info">
-					<h2 class="news-title">Только ночь, только хардкор</h2>
-					<p>Работать днем, как все? Мы против этого.Ближе к полуночи работа только начинается.</p>
-					<a href="#" class="button">УЗНАТЬ БОЛЬШЕ</a>
-				</div>
-				<div class="slide-photo">
-					<img src="img/news-image3.png" width="760" height="431" alt="Разработка адаптивных ссайтов Nerds">
-				</div>
-			</div> 
+			<ul class="flex-wrapper slides">
+				<li class="slide showing">
+					<div class="slide-info">
+						<h2 class="news-title">Долго, дорого, скрупулезно.</h2>
+						<p>Математически выверенный дизайн<br>
+						для вашего сайта или мобильного приложения.</p>
+						<a href="#" class="button">УЗНАТЬ БОЛЬШЕ</a>
+					</div>
+					<div class="slide-photo">
+						<img src="img/news-image1.png" width="760" height="431" alt="Разработка адаптивных ссайтов Nerds">
+					</div>
+				</li>
+				<li class="slide">
+					<div class="slide-info">
+						<h2 class="news-title">Любим математику как никто другой.</h2>
+						<p>Никакого креатива, только математические формулы для расчета идеальных пропорций.</p>
+						<a href="#" class="button">УЗНАТЬ БОЛЬШЕ</a>
+					</div>
+					<div class="slide-photo">
+						<img src="img/news-image2.png" width="760" height="431" alt="Разработка адаптивных ссайтов Nerds">
+					</div>
+				</li>
+				<li class="slide">
+					<div class="slide-info">
+						<h2 class="news-title">Только ночь, только хардкор</h2>
+						<p>Работать днем, как все? Мы против этого.Ближе к полуночи работа только начинается.</p>
+						<a href="#" class="button">УЗНАТЬ БОЛЬШЕ</a>
+					</div>
+					<div class="slide-photo">
+						<img src="img/news-image3.png" width="760" height="431" alt="Разработка адаптивных ссайтов Nerds">
+					</div>
+				</li>
+			</ul> 
 			<div class="flipper">
 				<ul class="slider-flipper">
 					<li class="slide-radio"><button class="button-slide" id="button-slide-1" aria-label="Первый слайд"></button></li>
@@ -136,7 +137,7 @@
 					ул. Б. Конюшенная, д. 19/8
 				</p>
 				<p>тел. +7 (812) 275-75-75</p>
-				<a href="contacts.html" class="button button-red">Напишите нам</a>
+				<a href="contacts.html" class="button button-red button-contact">Напишите нам</a>
 			</div> 
 		</section>
 		<div class="social-networks container">
@@ -151,6 +152,27 @@
 			</div>
 		</div>
 	</footer>
+	<section class="modal contuct-us">
+		<h2>Напишите нам</h2>
+		<form  class="contact-details" action="https://echo.htmlacademy.ru/" method="post">
+			<div class="flex-wrapper modal-flex">
+				<p>
+					<label for="name">Ваше имя:</label>
+					<input class="details-name" type="text" name="user-name" id="name" placeholder="Имя Фамилия" value="">
+				</p>
+				<p>
+					<label for="email">Ваш e-mail:</label>
+					<input class="details-email" type="text" name="user-email" id="email" placeholder="email@example.com" value="">
+				</p>
+			</div>
+			<p>
+				<label for="letter">Текст письма:</label>
+				<input class="details-letter" type="text" name="user-letter" id="letter" placeholder="В свободной форме" value="">
+			</p>
+			<button class="button" type="submit">Отправить</button>
+		</form>
+		<button class="modal-close" type="button">Закрыть</button>
+	</section>
 <script src="js/index.js"></script>	
 </body>
 </html>
