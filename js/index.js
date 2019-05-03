@@ -54,10 +54,20 @@ window.addEventListener("keydown", function(evt){
 
 var slides = document.querySelectorAll('.slides .slide');
 var currentSlide = 0;
-var slideInterval = setInterval(nextSlide, 3000);
+var slideInterval = setInterval(nextSlide, 10000);
  
 function nextSlide() {
     slides[currentSlide].className = 'slide';
     currentSlide = (currentSlide+1)%slides.length;
     slides[currentSlide].className = 'slide showing';
 }
+
+var slidesBtn = document.querySelectorAll(".slide-radio");
+for(var i = 0; i<slidesBtn.length; i++){
+	var slide =slidesBtn[i];
+	slide.addEventListener("click", nextSlide);
+}
+
+
+
+
