@@ -63,10 +63,13 @@ function nextSlide() {
 }
 
 var slidesBtn = document.querySelectorAll(".slide-radio");
-for(var i = 0; i<slidesBtn.length; i++){
+slidesBtn.forEach(function(item, index, array){
+	return item.addEventListener("click", nextSlide);
+});
+/*for(var i = 0; i<slidesBtn.length; i++){
 	var slide =slidesBtn[i];
 	slide.addEventListener("click", nextSlide);
-}
+}*/
 
 
 
